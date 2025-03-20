@@ -3,6 +3,7 @@ import FacebookLogin from "react-facebook-login";
 import { LinkedIn } from "react-linkedin-login-oauth2";
 import linkedin from "react-linkedin-login-oauth2/assets/linkedin.png";
 import AppleSignin from "react-apple-signin-auth";
+import MicrosoftLogin from "react-microsoft-login";
 
 const App = () => {
   const loginWithGoogle = useGoogleLogin({
@@ -29,6 +30,18 @@ const App = () => {
         <p>Google</p>
         <p>Client ID: {import.meta.env.VITE_PUBLIC_GOOGLE_CLIENT_ID}</p>
         <button onClick={() => loginWithGoogle()}>Login with Google</button>
+      </div>
+      <div>
+        <p>Microsoft</p>
+        <p>Client ID: {import.meta.env.VITE_PUBLIC_MICROSOFT_CLIENT_ID}</p>
+        <MicrosoftLogin
+          clientId={import.meta.env.VITE_PUBLIC_MICROSOFT_CLIENT_ID}
+          authCallback={(err, data) => {
+            console.log(err, data);
+          }}
+        >
+          <button>Login with Microsoft</button>
+        </MicrosoftLogin>
       </div>
       <div>
         <p>Facebook</p>

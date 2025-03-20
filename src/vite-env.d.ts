@@ -7,6 +7,7 @@ interface ImportMetaEnv {
   readonly VITE_PUBLIC_APPLE_CLIENT_ID: string;
   readonly VITE_PUBLIC_APPLE_REDIRECT_URL: string;
   readonly VITE_PUBLIC_STATE: string;
+  readonly VITE_PUBLIC_MICROSOFT_CLIENT_ID: string;
 }
 
 interface ImportMeta {

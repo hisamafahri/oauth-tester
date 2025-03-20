@@ -25,6 +25,9 @@ importers:
       react-linkedin-login-oauth2:
         specifier: ^2.0.1
         version: 2.0.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react-microsoft-login:
+        specifier: ^2.0.1
+        version: 2.0.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     devDependencies:
       "@eslint/js":
         specifier: ^9.21.0
@@ -70,6 +73,20 @@ packages:
         integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==,
       }
     engines: { node: ">=6.0.0" }
+
+  "@azure/msal-browser@2.39.0":
+    resolution:
+      {
+        integrity: sha512-kks/n2AJzKUk+DBqZhiD+7zeQGBl+WpSOQYzWy6hff3bU0ZrYFqr4keFLlzB5VKuKZog0X59/FGHb1RPBDZLVg==,
+      }
+    engines: { node: ">=0.8.0" }
+
+  "@azure/msal-common@13.3.3":
+    resolution:
+      {
+        integrity: sha512-n278DdCXKeiWhLwhEL7/u9HRMyzhUXLefeajiknf6AmEedoiOiv2r5aRJ7LXdT3NGPyubkdIbthaJlVtmuEqvA==,
+      }
+    engines: { node: ">=0.8.0" }
 
   "@babel/code-frame@7.26.2":
     resolution:
@@ -1562,6 +1579,15 @@ packages:
       react: 16.x || 17.x || 18.x
       react-dom: 16.x || 17.x || 18.x
 
+  react-microsoft-login@2.0.1:
+    resolution:
+      {
+        integrity: sha512-zTc8lPQ+d3ByNu+PA9NA15pnkEJNGrtxjJWkO8mypGgT8l6bPSH+lZDqxKisRaQ6SHjnuiNa3ULcU5b0kt9djA==,
+      }
+    peerDependencies:
+      react: ">=16"
+      react-dom: ">=16"
+
   react-refresh@0.14.2:
     resolution:
       {
@@ -1792,6 +1818,12 @@ snapshots:
     dependencies:
       "@jridgewell/gen-mapping": 0.3.8
       "@jridgewell/trace-mapping": 0.3.25
+
+  "@azure/msal-browser@2.39.0":
+    dependencies:
+      "@azure/msal-common": 13.3.3
+
+  "@azure/msal-common@13.3.3": {}
 
   "@babel/code-frame@7.26.2":
     dependencies:
@@ -2629,6 +2661,12 @@ snapshots:
 
   react-linkedin-login-oauth2@2.0.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+
+  react-microsoft-login@2.0.1(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+    dependencies:
+      "@azure/msal-browser": 2.39.0
       react: 19.0.0
       react-dom: 19.0.0(react@19.0.0)
 
